@@ -18,7 +18,10 @@ a {
 
 #menu h1{
     margin-inline: auto;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Bruno Ace', cursive;
+    color: green;
+    cursor: default;
+    padding-left: 50px;
 }
 
 #menu ul{
