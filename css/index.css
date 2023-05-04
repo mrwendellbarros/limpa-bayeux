@@ -1,0 +1,23 @@
+@import "style-menu.css";
+
+
+:root {
+    --bg-image: url(../assets/bg-page1.jpg);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
