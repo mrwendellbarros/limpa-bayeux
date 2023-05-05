@@ -20,4 +20,5 @@ body {
     background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-color: transparent;
+    background-size:cover ;
 }
