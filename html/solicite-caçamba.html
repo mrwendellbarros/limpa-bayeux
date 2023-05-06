@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="icon" type="image/x-icon" href="https://user-images.githubusercontent.com/102330689/235329278-c956807c-f150-4edb-84e8-7ffc5f607b45.png">
-    <title>Limpa Bayeux</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto& display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://user-images.githubusercontent.com/102330689/235329278-c956807c-f150-4edb-84e8-7ffc5f607b45.png">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/solicite-caçamba.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+  <title>Limpa Bayeux</title>
 </head>
 <body>
-    <div id="menu" class="">
+    <div id="menu">
         <h1 class="m-3">LIMPABAYEUX</h1>
      <ul class="nav justify-content-end nav-pills m-3">
         <li class="nav-item mx-auto">
@@ -31,69 +35,46 @@
         </li>
       </ul>
     </div>
-    <main>
-      <h1>SOLICITE UMA CAÇAMBA</h1>
-
-      <form action="">
-        <div class="row">
-          <form class="col s12">
+    <main>      
+      <div id = "formulariocacamba" class="container p-3 mb-2 bg-light text-dark">
+        <h2>SOLICITE UMA CAÇAMBA</h2>
+        <form onsubmit="submitHandler(event)">
+          <div>
             <div class="row">
-              <div class="input-field col s6">
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Name:</label>
+              <div class="col">
+                  <label for="exampleInputEmail1">Endereço de email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" name="email">
+                  <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
               </div>
-              <div class="input-field col s6">
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone:</label>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input type="email" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input">E-mail:</label>
+              <div class="col">
+                  <label for="telefone">Telefone:</label>
+                  <input class="form-control" id="telefone" name="telefone">
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
             <div class="row">
-              <div class="input-field col s12">
-                <input type="text" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input">Cep:</label>
+              <div class="col">
+                  <label for="endereco">Endereço para caçamba:</label>
+                  <input class="form-control" id="endereco" name="endereco">
+              </div>
+              <div class="col">
+                  <label for="cep"> Cep:</label>
+                  <input class="form-control" id="cep" maxlength="9" onkeypress="cepMascara(this)" name="cep" required />
+              </div>
+              <div class="col">
+                  <label for="pontoDeReferencia">Ponto de referencia:</label>
+                  <input class="form-control" id="pontoDeReferencia" name="referencia">
+              </div>
+            </div>
+            <div class="row">
+              <div id = "just" class="col">
+                  <label for="justificativa">Explique o motivo da solicitação:</label>
+                  <input class="form-control" id="justificativa" name="justificativa">
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input type="text" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input">Rua:</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Explique o porque:</label>
-              </div>
-            </div>
-          </form>
-        </div>
-      </form>
+          <button type="submit" class="btn btn-success" id="button">Enviar</button>
+        </form>
+      </div>
     </main>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
