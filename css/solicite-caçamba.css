@@ -8,8 +8,14 @@
     margin-top: 100px;
     border-radius: 8px;
 }
-#card{
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+    margin: 8%;
+}
+
+.map {
+    width: 100%;
 }
