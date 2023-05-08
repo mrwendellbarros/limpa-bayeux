@@ -3,9 +3,13 @@
     background-color: rgb(82, 139, 113);
     margin-top: 15px;
     
-}
-    
+}  
 #formulariocacamba{
     margin-top: 100px;
     border-radius: 8px;
+}
+#card{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
 }

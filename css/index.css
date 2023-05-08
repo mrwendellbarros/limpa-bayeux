@@ -2,7 +2,7 @@
 @import "solicite-caçamba.css";
 
 :root {
-    --bg-image: url(../assets/bg-page1.jpg);
+    --bg-image: url(../assets/bg-page1.png);
 }
 
 * {
