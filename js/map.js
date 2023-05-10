@@ -1,4 +1,19 @@
 
+
+
+var map = L.map('mapid').setView([-7.139059, -34.931185], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+circleMap()
+
+
+/*L.marker([lati, long]).addTo(map)
+.bindPopup('Local com entulho/lixo.')
+.openPopup();*/
+
 function buscaLongitudeLatitude() {
     let cep = document.getElementById("cep").value;
     cep.replace("-", "")
@@ -12,29 +27,23 @@ function buscaLongitudeLatitude() {
         // tratando a resposta da requisição
         req.onload = function ()  {
             let endereco = JSON.parse(req.response);
-            var lati = endereco.location.coordinates.latitude;
-            var long = endereco.location.coordinates.longitude;
-            buscaMap(long, lati);
+            let lati = endereco.location.coordinates.latitude;
+            let long = endereco.location.coordinates.longitude;
+            circleMap(long, lati);
         }
     }
 }
 
-
-function buscaMap(longitude, latitude) {
+function circleMap(longitude, latitude) {
     var long = longitude
     var lati = latitude
-    var map = L.map('mapid').setView([long, lati], 13);
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            L.marker([long, lati]).addTo(map)
-            .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-            .openPopup();
-}
-
-window.onload = function() {
-    let txtcep = document.getElementById('cep');
-    txtcep.addEventListener("blur", buscaLongitudeLatitude);
+    return `
+    var circle = L.circle([${lati}, ${long}], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 200
+    }).addTo(map);
+    `
 }

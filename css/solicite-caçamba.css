@@ -13,9 +13,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10%;
-    margin: 8%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-inline: 8%;
 }
 
-#mapid {
-    width: 100%;
+.card {
+    width: 400px;
+    padding: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.card span, p {
+    margin-top: 5px;
+}
+
+.card .quest{
+    font-weight: 600;
+}
+
+.mapid {
+    border-radius: 8px;
+    margin-inline: auto;
+    width: 65%;
+    height: 300px;
+    margin-top: 40px;
 }

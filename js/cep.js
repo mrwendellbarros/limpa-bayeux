@@ -1,8 +1,6 @@
 function buscaCep(){
     let cep = document.getElementById('cep').value;
-    if (cep.length == 5) {
-        cep = cep - '-' 
-    }
+    cep.replace("-", "")
     if ( cep !== "") {
         let url = `https://brasilapi.com.br/api/cep/v2/${cep}`;
 
@@ -18,7 +16,7 @@ function buscaCep(){
                 /*document.getElementById("").value = endereco.location.coordinates.longitude;
                 document.getElementById("").value = endereco.location.coordinates.latitude;*/
             } else if (req.status === 404) {
-                alert("CEP inválido!")
+                
             } else {
                 alert("Erro ao fazer a requisição!")
             }

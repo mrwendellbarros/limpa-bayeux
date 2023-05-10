@@ -32,7 +32,24 @@ function insertSolicitacaoCard(solicitacao) {
   }
 
 function solicitacaoCard(solicitacao) {
-    return `<div class="row">
+    return `            
+            <div id="cards">
+            <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                <div class="card-image">
+                    <span class="card-title"> <span class="quest" >Cep:</span> ${solicitacao.cep}</span>
+                </div>
+                <div class="card-content">
+                    <span> <span class="quest" >Endereço:</span> ${solicitacao.endereco}</span>
+                    <p> <span class="quest" >Motivo da solicitação:</span> ${solicitacao.justificativa}</p>
+                </div>
+                </div>
+            </div>
+            </div>`;
+  }
+
+  /*<div class="row">
             <div class="col s12 m6">
             <div class="card">
             <div class="card-image">
@@ -45,5 +62,4 @@ function solicitacaoCard(solicitacao) {
             </div>
             </div>
             </div>
-            </div>`;
-  }
+            </div>*/
