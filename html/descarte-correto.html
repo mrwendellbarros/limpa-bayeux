@@ -11,29 +11,40 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/descarte-correto.css">
     <link rel="icon" type="image/x-icon" href="https://user-images.githubusercontent.com/102330689/235329278-c956807c-f150-4edb-84e8-7ffc5f607b45.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Limpa Bayeux</title>
 </head>
 <body>
-    <div id="menu">
-      <h1 class="m-3">LIMPABAYEUX</h1>
-      <ul class="nav justify-content-end nav-pills m-3">
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="./home.html">HOME</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="./solicite-caçamba.html">SOLICITE CAÇAMBA</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="./descarte-correto.html">DESCARTE CORRETO</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="./sobre-a-prefeitura.html">SOBRE A PREFEITURA</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a id="Limpa" class="navbar-brand" href="#">LIMPABAYEUX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./solicite-caçamba.html">SOLICITE CAÇAMBA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./descarte-correto.html">DESCARTE CORRETO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre-a-prefeitura.html">SOBRE A PREFEITURA</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
     <div id="main" class="container p-4 mb-2 text-dark">
       <h2 style="text-align: center; margin-bottom: 3em;"  class="display-4 mb-3"> Descarte correto de lixo</h2>
       <p style="text-align: center; font-size: 1.2em; margin-bottom: 3em;" >O descarte de lixo é um problema sério que afeta o meio ambiente e a saúde pública. Para ajudar a conscientizar a população sobre a importância do descarte de lixo, separamos algumas dicas importantes:</p>
@@ -67,29 +78,30 @@
       </div>
     </div>
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Contatos</h5>
-          <ul class="list-unstyled">
-            <li>Endereço: Av.Liberdade, Nº 3720, Bayeux, PB</li>
-            <li>Telefone: (83) 98862-8073</li>
-            <li>Email: sic@bayeux.pb.gov.br</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Redes Sociais</h5>
-          <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/prefeiturabayeux/">Facebook</a></li>
-            <li><a href="https://www.instagram.com/prefeiturabayeux/?igshid=6jotjfx2h2lh">Instagram</a></li>
-            <li><a href="https://www.youtube.com/channel/UCex8nfbWXZbuka8POUthQgA">YouTube</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Sobre Nós</h5>
-          <p>Projeto com objetivo de diminuir o acumulo de lixo nas ruas e em terrenos baldios, afim de contribuir para o bem estar da população e o preservar o meio ambiente.</p>
-        </div>
+<footer class="footer mt-3 py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Contatos</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-map-marker-alt"></i> Av. Liberdade, Nº 3720, Bayeux, PB</li>
+          <li><i class="fas fa-phone"></i> (83) 98862-8073</li>
+          <li><i class="fas fa-envelope"></i> sic@bayeux.pb.gov.br</li>
+        </ul>
       </div>
-  </footer>
+      <div class="col-md-4">
+        <h5>Redes Sociais</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/prefeiturabayeux/"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/prefeiturabayeux/?igshid=6jotjfx2h2lh"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.youtube.com/channel/UCex8nfbWXZbuka8POUthQgA"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Sobre Nós</h5>
+        <p>Projeto com objetivo de diminuir o acúmulo de lixo nas ruas e em terrenos baldios, contribuindo para o bem-estar da população e a preservação do meio ambiente.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
